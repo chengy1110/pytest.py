@@ -1,10 +1,13 @@
 import os
+import sys
 import unittest
 import HTMLTestRunner
 import time
 from common.log import MyLog
 import readConfig
 from common.configEmail import Email
+
+sys.path.append("..")
 
 logger = MyLog.get_log().logger
 myConfig = readConfig.ReadConfig()
