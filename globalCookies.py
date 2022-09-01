@@ -1,7 +1,12 @@
+import os
+
 import ddddocr
 import requests
 
 from common.log import MyLog
+
+curPath = os.path.abspath(os.path.dirname(__file__))
+rootPath = os.path.abspath(os.path.dirname(curPath)+os.path.sep+".")
 
 logger = MyLog.get_log().logger
 class GlobalCookies:
