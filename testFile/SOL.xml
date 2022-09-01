@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page>
+	<database name="db_demo_org">
+	   <table name="t_organization_info">
+		   <sql id="selectByCity">SELECT * FROM t_organization_info WHERE city = %s</sql>
+		   <sql id="selectByTypeAndCity">SELECT * FROM t_organization_info WHERE org_code_type = %s and city = %s</sql>
+	   </table>
+	</database>
+	<database name="demo">
+	   <table name="t_case">
+		   <sql id="selectCaseAll">SELECT * FROM t_case</sql>
+	   </table>
+	</database>
+</page>
