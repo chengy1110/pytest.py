@@ -4,8 +4,8 @@ import os
 import requests
 
 curPath = os.path.abspath(os.path.dirname(__file__))
-os.path.abspath(os.path.dirname(curPath)+"/venv/Lib/site-packages")
-print(os.path.abspath(os.path.dirname(curPath)+"/venv/Lib/site-packages"))
+os.path.abspath(os.path.dirname(curPath)+"/venv/Lib/site-packages/ddddocr")
+print(os.path.abspath(os.path.dirname(curPath)+"/venv/Lib/site-packages/ddddocr"))
 import ddddocr
 
 os.path.abspath(os.path.dirname(__file__))
