@@ -2,8 +2,14 @@ import os
 
 
 import requests
+
+curPath = os.path.abspath(os.path.dirname(__file__))
+os.path.abspath(os.path.dirname(curPath)+"/venv/Lib/site-packages")
+print(os.path.abspath(os.path.dirname(curPath)+"/venv/Lib/site-packages"))
 import ddddocr
 
+os.path.abspath(os.path.dirname(__file__))
+print(os.path.abspath(os.path.dirname(__file__)))
 from common.log import MyLog
 
 curPath = os.path.abspath(os.path.dirname(__file__))
