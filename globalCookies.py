@@ -5,8 +5,7 @@ import requests
 
 import sys
 
-sys.path.append('..')
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
+
 import ddddocr
 
 os.path.abspath(os.path.dirname(__file__))

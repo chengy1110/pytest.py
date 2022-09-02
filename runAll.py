@@ -7,7 +7,8 @@ from common.log import MyLog
 import readConfig
 from common.configEmail import Email
 
-
+sys.path.append('..')
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
 
 logger = MyLog.get_log().logger
 myConfig = readConfig.ReadConfig()
