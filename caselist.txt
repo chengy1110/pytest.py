@@ -1,7 +1,7 @@
 #testLogin
 testAddTaskForm
-#testAddRequire
-#testaddChildTask
+testAddRequire
+testaddChildTask
 #testAddOuterUser
 #testLogout
 #testSearch
