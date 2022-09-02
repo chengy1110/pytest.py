@@ -1,7 +1,8 @@
 import os
 
-import ddddocr
+
 import requests
+import ddddocr
 
 from common.log import MyLog
 
