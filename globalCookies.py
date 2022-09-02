@@ -3,17 +3,12 @@ import os
 
 import requests
 
-import sys
-
 
 import ddddocr
 
-os.path.abspath(os.path.dirname(__file__))
-print(os.path.abspath(os.path.dirname(__file__)))
+
 from common.log import MyLog
 
-curPath = os.path.abspath(os.path.dirname(__file__))
-rootPath = os.path.abspath(os.path.dirname(curPath)+os.path.sep+".")
 
 logger = MyLog.get_log().logger
 class GlobalCookies:
@@ -54,6 +49,6 @@ class GlobalCookies:
         return cookies
 
 
-"""if __name__ == '__main__':
+if __name__ == '__main__':
     globalCookies = GlobalCookies()
-    globalCookies.save_cookies()"""
+    globalCookies.save_cookies()
