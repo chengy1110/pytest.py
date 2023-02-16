@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page>
+	<database name="local_yftx">
+	   <table name="dp_task_form">
+		   <sql id="selectByTask_name">SELECT * FROM dp_task_form WHERE task_name = "git账号申请"</sql>
+		   <sql id="selectByhandler">SELECT * FROM dp_task_form WHERE handler_id = 3771 AND creator_id = 3771</sql>
+		   <sql id="deleteByTask_name">delete FROM dp_task_form WHERE task_name = "测试父工单07"</sql>
+	   </table>
+	</database>
+	<database name="local_user_center">
+	   <table name="uc_user">
+		   <sql id="selectCaseAll">SELECT * FROM uc_user</sql>
+	   </table>
+	</database>
+	<database name="yftx">
+		<table name="DP_TASK_FORM">
+		    <sql id="insert_task_form">INSERT INTO `yftx`.`DP_TASK_FORM` (`id`, `task_name`, `task_number`,
+			   `project_id`, `project_name`, `project_number`, `creator_id`, `creator_name`, `handler_id`,
+			   `handler_name`, `label_name`, `task_type`, `super_task_id`, `start_time`, `end_time`, `priority`,
+			   `predict_time`, `task_intergral`, `remaining_time`, `description`, `file_path`, `file_name`,
+			   `progress`, `status`, `create_time`, `avaliable`, `finish_time`, `delay_sign`, `relate_system_id`,
+			   `question_type`, `feedback_area`, `feedback_person`, `is_support`, `product`, `skill_type`,
+			   `skill_scope`, `first_dept_id`, `second_dept_id`, `dispose_type`, `work_type`, `complexCount`,
+			   `filing_month`, `is_good_evaluate`, `product_id`, `version_id`, `question_person`, `feedback_telphone`,
+			   `serviceInfo`, `browser`, `resolve`, `autolog`, `autoquestion`, `actual_time`, `questionList`,
+			   `extend1`, `extend2`, `extend3`, `extend4`, `extend5`, `desc_text`, `scheme_name`, `scheme_path`)
+			   VALUES ('3353fbee-3c8b-4a2d-9b10-859330275238', '测试父工单0109', '20862', '321576', '（研究）产品体系管理',
+			   'YJCPTX', '3771', '成语', '3771', '成语', '', '1', '0', '2022-11-04', '2022-11-04', '3', '8', '0', '8',
+			   '', '[]', '[]', '0', '1', '2023-01-13 16:20:17', '1', NULL, '', '', NULL, '', '', '0', '', NULL, NULL,
+			   '', '', '', '', NULL, '', '0', '', '', '', '', '', '', '', '0', '0', NULL, '', '2023-01-05 09:52:17',
+			   '', '', '', '', 'index_', '[]', '[]');</sql>
+			 <sql id="delete_task_form">delete FROM DP_TASK_FORM WHERE id = "3353fbee-3c8b-4a2d-9b10-859330275238"</sql>
+	   </table>
+		<table name="DP_TASK">
+		   <sql id="deleteTaskBy_name">DELETE  FROM DP_TASK WHERE task_name = "test测试任务"</sql>
+			<sql id="insert_child_task">INSERT INTO `yftx`.`DP_TASK` (`id`, `product_id`, `version_id`, `creator_id`,
+				`require_id`, `task_number`, `task_name`, `project_name`, `label_name`, `task_type`, `module_id`,
+				`start_time`, `end_time`, `priority`, `predict_time`, `handler_id`, `task_intergral`, `complexCount`,
+				`complexWeight`, `urgencyCount`, `urgencyWeight`, `innovateCount`, `innovateWeight`, `basicsCount`,
+				`description`, `file_path`, `file_name`, `super_task_id`, `remaining_time`, `progress`, `status`,
+				`create_time`, `avaliable`, `extend1`, `extend2`, `extend3`, `creator_name`, `handler_name`,
+				`finish_time`, `task_category`, `extend4`, `extend5`, `extend6`, `extend7`, `filing_month`,
+				`defectId`, `desc_text`, `follow_task`) VALUES ('d240ff1c-37e1-4827-9716-63035f82f926',
+				'fa5ca175-6d42-449f-8073-b9361a2e493c', 'b3f7c0eb-f8a0-456c-9836-e75a9ce04879', '3771', '',
+				'42252', 'test测试父任务', '杰思科不动产信息自助服务平台（公积金版）', '', '5', '', '2023-02-06',
+				'2023-02-22', '3', '1', '3771', '0', NULL, '40', NULL, '30', NULL, '30', NULL, '', '[]', '[]', '0',
+				'1', '0', '1', '2023-02-06 16:41:22', '1', NULL, '9891', NULL, '成语', '成语', NULL, '1', NULL, NULL,
+				'2023-02-06 16:41:22', NULL, NULL, NULL, 'index_', NULL);</sql>
+			<sql id="delete_child_task">DELETE  FROM DP_TASK WHERE task_name = "test测试子任务"</sql>
+			<sql id="delete_father_task">DELETE  FROM DP_TASK WHERE task_name = "test测试父任务"</sql>
+	   </table>
+	</database>
+</page>

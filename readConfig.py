@@ -35,3 +35,7 @@ class ReadConfig:
     def get_db(self, name):
         value = self.cf.get("DATABASE", name)
         return value
+
+    def get_excel(self, name):
+        value = self.cf.get("EXCEL", name)
+        return value

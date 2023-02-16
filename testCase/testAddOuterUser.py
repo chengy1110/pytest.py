@@ -11,9 +11,9 @@ from faker import Faker
 import pandas as pd
 import regex
 
-from common.common import *
+from common.commonData import *
 from common.configHttp import ConfigHttp
-from common.log import MyLog
+from common.mylog import MyLog
 
 
 fk= Faker(["zh_CN"])
@@ -26,7 +26,7 @@ class AddOuterUser(unittest.TestCase):
         logger.info('*****启动testAddOuterUser用例*****')
         warnings.simplefilter('ignore',ResourceWarning)
         #读取该sheet页的所有用例数据
-        self.data_list = get_xls("test-data.xlsx","testUserSearch")
+        self.data_list = get_xls("test-data.xlsxx","testUserSearch")
 
     #随机生成外部人员名字
     def random_outer_name(self):

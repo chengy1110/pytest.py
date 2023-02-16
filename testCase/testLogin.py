@@ -5,9 +5,9 @@ import unittest
 import warnings
 
 import requests
-from common.common import *
+from common.commonData import *
 from common.configHttp import ConfigHttp
-from common.log import MyLog
+from common.mylog import MyLog
 
 
 
