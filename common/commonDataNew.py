@@ -1,8 +1,7 @@
 import os
-#from xlrd import open_workbook
+
 import xlrd
-from xml.etree import ElementTree as ElementTree
-from jsonpath_rw import jsonpath,parse
+
 from common import configHttp
 import readConfig as readConfig
 from common.mylog import MyLog
