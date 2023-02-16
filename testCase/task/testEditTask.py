@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-import json
+
 import unittest
 import warnings
-from ast import literal_eval
+
 
 from common.commonData import *
 from common.configHttp import ConfigHttp
 from common.mylog import MyLog
 from testCase.testLogin import Login
-from globalCookies import GlobalCookies
+
 
 logger = MyLog.get_log().logger
 configHttp = ConfigHttp()

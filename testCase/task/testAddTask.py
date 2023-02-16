@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-import json
+
 import unittest
 import warnings
-from ast import literal_eval
+
 from common.commonDataNew import *
 from common.configDB import MyDB
 

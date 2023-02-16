@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-import ast
-import json
+
 import unittest
 import warnings
 from common.commonData import *

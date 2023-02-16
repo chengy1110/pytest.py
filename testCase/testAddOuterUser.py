@@ -1,15 +1,14 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-import json
+
 import unittest
 import warnings
-from ast import literal_eval
+
 import random
 from shlex import join
 
 from faker import Faker
-import pandas as pd
-import regex
+
 
 from common.commonData import *
 from common.configHttp import ConfigHttp
