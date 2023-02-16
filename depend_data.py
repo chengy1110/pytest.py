@@ -1,6 +1,6 @@
 import json
 
-import requests
+
 
 from common.commonData import *
 from common.configHttp import ConfigHttp
