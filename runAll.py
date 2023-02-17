@@ -1,7 +1,4 @@
-import os,sys
-dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(dir)
-sys.path.append("D:\\apache-tomcat-9.0.41\\apache-tomcat-9.0.41\\webapps\\NEW_jenkins\\workspace\\test-jiekou-project\\venv\\Lib\\site-packages")
+import os
 import unittest
 import HTMLTestRunner
 import time
