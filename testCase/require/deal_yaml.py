@@ -8,7 +8,7 @@ class DealYaml:
              return  result
 
     def write_yaml(self,data):
-        with open('./testCase/require/data.yaml','w',encoding='utf-8') as f:
+        with open(r"D:\apache-tomcat-9.0.41\apache-tomcat-9.0.41\webapps\Jenkins\PROJECT\workspace\test_jiekou_project\testCase\require\deal_yaml.py",'w',encoding='utf-8') as f:
             yaml.dump(data,stream=f)
 
     if __name__ == '__main__':
