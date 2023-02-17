@@ -2,7 +2,7 @@ import yaml
 
 class DealYaml:
     def open_yaml(self):
-        with open("D://apache-tomcat-9.0.41//apache-tomcat-9.0.41//webapps//Jenkins//PROJECT//workspace//test-jiekou-project//testCase//require//deal_yaml.py",encoding='utf-8') as f:
+        with open("D:\apache-tomcat-9.0.41\apache-tomcat-9.0.41\webapps\Jenkins\PROJECT\workspace\test_jiekou_project\testCase\require\deal_yaml.py",encoding='utf-8') as f:
              result = yaml.load(f,Loader=yaml.FullLoader)
              print(result)
              return  result
