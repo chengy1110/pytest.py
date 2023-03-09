@@ -34,7 +34,7 @@ class Runner:
         suite_model = []
 
         for case in self.caseList:
-            case_file = os.path.join(readConfig.proDir, "./testCase")
+            case_file = os.path.join(readConfig.proDir, "")
             print("文件夹名称"+case_file)
             #根据/分割文件夹、文件名
             case_name = case.split("/")[-1]
