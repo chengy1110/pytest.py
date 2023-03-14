@@ -1,23 +1,23 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-import unittest
+import pytest
 import warnings
 from common.commonData import *
 from common.configDB import MyDB
 from common.configHttp import ConfigHttp
 from common.mylog import MyLog
-from testCase.testLogin import Login
+
 
 logger = MyLog.get_log().logger
 configHttp = ConfigHttp()
-login = Login()
+
 db = MyDB()
 getData = GetData()
 
-class Search(unittest.TestCase):
+class Test_Search():
     """数据库查询"""
-    def setUp(self):
+    def setup(self):
         logger.info('*****启动testSearch用例*****')
         warnings.simplefilter('ignore',ResourceWarning)
 
@@ -60,6 +60,6 @@ class Search(unittest.TestCase):
             logger.info('查询失败!')"""
 
 
-    def tearDown(self):
+    def teardown(self):
         print('*****销毁Search用例*****')
 
