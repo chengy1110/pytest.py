@@ -3,7 +3,7 @@ import readConfig as readConfig
 from common.mylog import MyLog as Log
 
 from globalCookies import GlobalCookies
-from testCase.require.deal_yaml import DealYaml
+from testCase.test_require.deal_yaml import DealYaml
 
 localReadConfig = readConfig.ReadConfig()
 dealYaml = DealYaml()

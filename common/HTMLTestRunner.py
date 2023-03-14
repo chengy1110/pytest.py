@@ -1,5 +1,5 @@
 import time
-import unittest
+import pytest
 from HTMLTestRunner import HTMLTestRunner
 
 if __name__ == "__main__":
@@ -23,7 +23,7 @@ if __name__ == "__main__":
 A TestRunner for use with the Python unit testing framework. It
 generates a HTML report to show the result at a glance.
 The simplest way to use this is to invoke its main method. E.g.
-    import unittest
+    import pytest
     import HTMLTestRunner
     ... define your tests ...
     if __name__ == '__main__':
@@ -96,7 +96,7 @@ import datetime
 import io
 import sys
 import time
-import unittest
+import pytest
 from xml.sax import saxutils
 
 

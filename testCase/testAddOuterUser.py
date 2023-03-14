@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-import unittest
+import pytest
 import warnings
 
 import random
@@ -19,9 +19,9 @@ fk= Faker(["zh_CN"])
 logger = MyLog.get_log().logger
 configHttp = ConfigHttp()
 
-class AddOuterUser(unittest.TestCase):
+class Test_AddOuterUser():
     """新增外部人员"""
-    def setUp(self):
+    def setup(self):
         logger.info('*****启动testAddOuterUser用例*****')
         warnings.simplefilter('ignore',ResourceWarning)
         #读取该sheet页的所有用例数据
@@ -81,6 +81,6 @@ class AddOuterUser(unittest.TestCase):
             logger.info('新增失败!')
 
 
-    def tearDown(self):
+    def teardown(self):
         print('*****销毁Add用例*****')
 

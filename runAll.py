@@ -1,5 +1,5 @@
 import os
-import unittest
+import  pytest
 import HTMLTestRunner
 import time
 from common.mylog import MyLog
@@ -11,7 +11,7 @@ logger = MyLog.get_log().logger
 myConfig = readConfig.ReadConfig()
 
 
-class Runner:
+class Test_Runner:
 
     def __init__(self):
 
@@ -80,4 +80,5 @@ class Runner:
                logger.info("不知道的状态")
 
 if __name__ == '__main__':
-    Runner().run()
+   
+    pytest.main()

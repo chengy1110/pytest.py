@@ -1,0 +1,90 @@
+2023-02-23 09:13:42,466 - root - INFO - ********开始测试********
+2023-02-23 09:13:44,701 - root - INFO - *****启动testAddTaskForm用例*****
+2023-02-23 09:13:45,368 - root - INFO - test_taskForm_01:http://192.168.9.221:8086/taskForm/addTask
+2023-02-23 09:13:45,369 - root - INFO - test_taskForm_01:ok
+2023-02-23 09:13:45,369 - root - INFO - test_taskForm_01:200
+2023-02-23 09:13:45,369 - root - INFO - 新增父工单成功!
+2023-02-23 09:13:45,369 - root - INFO - *****启动testAddTaskForm用例*****
+2023-02-23 09:13:52,030 - root - INFO - test_taskForm_02:http://192.168.9.221:8086/taskForm/addTask
+2023-02-23 09:13:52,031 - root - INFO - test_taskForm_02:ok
+2023-02-23 09:13:52,031 - root - INFO - test_taskForm_02:200
+2023-02-23 09:13:52,066 - root - INFO - *****启动testAddTaskForm用例*****
+2023-02-23 09:13:58,610 - root - INFO - test_taskForm_03:http://192.168.9.221:8086/taskForm/addTask
+2023-02-23 09:13:58,610 - root - INFO - test_taskForm_03:ok
+2023-02-23 09:13:58,610 - root - INFO - test_taskForm_03:200
+2023-02-23 09:13:58,610 - root - INFO - *****启动testAddTaskForm用例*****
+2023-02-23 09:14:05,167 - root - INFO - test_taskForm_04:http://192.168.9.221:8086/taskForm/addTask
+2023-02-23 09:14:05,168 - root - INFO - test_taskForm_04:{"timestamp":"2023-02-23T01:14:06.058+0000","status":500,"error":"Internal Server Error","message":"Transaction rolled back because it has been marked as rollback-only","path":"/taskForm/addTask"}
+2023-02-23 09:14:05,168 - root - INFO - test_taskForm_04:500
+2023-02-23 09:14:05,168 - root - INFO - 必填项taskName长度超出255字符限制:测试成功
+2023-02-23 09:14:05,168 - root - INFO - *****启动testAddChildTaskForm用例*****
+2023-02-23 09:14:05,169 - root - INFO - *****启动DependData用例*****
+2023-02-23 09:14:05,292 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-02-23 09:14:05,328 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-02-23 09:14:05,872 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-02-23 09:14:10,469 - root - INFO - get_depend_response有点问题:test_taskForm_05
+2023-02-23 09:14:10,470 - root - INFO - *****启动testSearchTaskForm用例*****
+2023-02-23 09:14:10,496 - root - INFO - {'programmeEnclosure': [], 'handlerCheckSpareData': [], 'handler': ['3771'], 'handlerInfo': [{'id': '3771', 'name': '成语'}], 'outerType': 1, 'taskName': '测试父工单07@#￥%', 'relateSystemId': '', 'project': {'id': '321576', 'projectId': '321576', 'projectName': '（研究）产品体系管理', 'userId': '3771', 'createDate': '2022-11-02 15:37:56', 'available': 'true', 'projectIdList': [], 'regionCode': '', 'fullRegions': []}, 'projectId': '321576', 'projectName': '（研究）产品体系管理', 'tags': [], 'taskType': 1, 'questionType': '', 'areaArr': [], 'feedbackPerson': '', 'handlerName': '成语', 'handlerId': '3771', 'startTime': '2022-11-04', 'endTime': '2022-11-04', 'priority': 3, 'predictTime': 8, 'taskIntergral': 0, 'description': '', 'fileName': '[]', 'filePath': '[]', 'schemeName': '[]', 'schemePath': '[]', 'isSupport': '0', 'product': '', 'skillType': '', 'skillScope': '', 'firstDeptId': '921', 'secondDeptId': '10641', 'disposeTypeArr': [], 'workTypeArr': [], 'complexcount': '', 'autolog': 'false', 'autoquestion': 'false', 'productZt': '', 'version': '', 'status': 3, 'questionPerson': '', 'questionPersonId': '', 'feedbackTelphone': '', 'serviceInfo': '', 'browser': '', 'actualTime': '', 'questionOption': '', 'questionOptions': '[]', 'productId': '', 'versionId': ''}
+2023-02-23 09:14:10,516 - root - INFO - /taskForm/addTask
+2023-02-23 09:14:11,013 - root - INFO - http://192.168.9.221:8086/taskForm/addTask?handler=3771&handlerInfo=id&handlerInfo=name&outerType=1&taskName=%E6%B5%8B%E8%AF%95%E7%88%B6%E5%B7%A5%E5%8D%9507%40%23%EF%BF%A5%25&relateSystemId=&project=id&project=projectId&project=projectName&project=userId&project=createDate&project=available&project=projectIdList&project=regionCode&project=fullRegions&projectId=321576&projectName=%EF%BC%88%E7%A0%94%E7%A9%B6%EF%BC%89%E4%BA%A7%E5%93%81%E4%BD%93%E7%B3%BB%E7%AE%A1%E7%90%86&taskType=1&questionType=&feedbackPerson=&handlerName=%E6%88%90%E8%AF%AD&handlerId=3771&startTime=2022-11-04&endTime=2022-11-04&priority=3&predictTime=8&taskIntergral=0&description=&fileName=%5B%5D&filePath=%5B%5D&schemeName=%5B%5D&schemePath=%5B%5D&isSupport=0&product=&skillType=&skillScope=&firstDeptId=921&secondDeptId=10641&complexcount=&autolog=false&autoquestion=false&productZt=&version=&status=3&questionPerson=&questionPersonId=&feedbackTelphone=&serviceInfo=&browser=&actualTime=&questionOption=&questionOptions=%5B%5D&productId=&versionId=
+2023-02-23 09:14:11,013 - root - INFO - {"timestamp":"2023-02-23T01:14:11.903+0000","status":405,"error":"Method Not Allowed","message":"Request method 'GET' not supported","path":"/taskForm/addTask"}
+2023-02-23 09:14:11,014 - root - INFO - <Response [405]>
+2023-02-23 09:14:11,014 - root - INFO - 失败!
+2023-02-23 09:14:11,016 - root - INFO - *****启动testSendBackTask用例*****
+2023-02-23 09:14:11,016 - root - INFO - *****启动DependData用例*****
+2023-02-23 09:14:11,213 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-02-23 09:14:11,252 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-02-23 09:14:11,861 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-02-23 09:14:13,742 - root - INFO - get_depend_response有点问题:test_taskForm_12
+2023-02-23 09:14:13,742 - root - INFO - *****启动testSubmitAssignTaskForm用例*****
+2023-02-23 09:14:13,742 - root - INFO - *****启动DependData用例*****
+2023-02-23 09:14:13,848 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-02-23 09:14:13,884 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-02-23 09:14:14,514 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-02-23 09:14:16,442 - root - INFO - get_depend_response有点问题:test_taskForm_08
+2023-02-23 09:14:16,442 - root - INFO - *****启动testSubmitEvaluateTaskForm用例*****
+2023-02-23 09:14:16,443 - root - INFO - *****启动DependData用例*****
+2023-02-23 09:14:16,539 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-02-23 09:14:16,576 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-02-23 09:14:16,934 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-02-23 09:14:18,820 - root - INFO - get_depend_response有点问题:test_taskForm_09
+2023-02-23 09:14:18,821 - root - INFO - *****启动testSubmitLogTaskForm用例*****
+2023-02-23 09:14:18,821 - root - INFO - *****启动DependData用例*****
+2023-02-23 09:14:18,915 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-02-23 09:14:18,950 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-02-23 09:14:19,602 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-02-23 09:14:22,851 - root - INFO - get_depend_response有点问题:test_taskForm_07
+2023-02-23 09:14:22,851 - root - INFO - *****启动testSubmitProcessFeedback用例*****
+2023-02-23 09:14:22,851 - root - INFO - *****启动DependData用例*****
+2023-02-23 09:14:22,952 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-02-23 09:14:22,988 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-02-23 09:14:23,531 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-02-23 09:14:25,250 - root - INFO - get_depend_response有点问题:test_taskForm_10
+2023-02-23 09:14:25,251 - root - INFO - *****启动testSubmitSendUser用例*****
+2023-02-23 09:14:25,251 - root - INFO - *****启动DependData用例*****
+2023-02-23 09:14:25,349 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-02-23 09:14:25,389 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-02-23 09:14:25,908 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-02-23 09:14:27,831 - root - INFO - get_depend_response有点问题:test_taskForm_11
+2023-02-23 09:14:27,831 - root - INFO - *****启动testSaveEditTaskForm用例*****
+2023-02-23 09:14:27,832 - root - INFO - *****启动DependData用例*****
+2023-02-23 09:14:27,924 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-02-23 09:14:27,961 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-02-23 09:14:28,525 - root - INFO - get_request_key有点问题:test_taskForm_000
+2023-02-23 09:14:30,212 - root - INFO - get_depend_response有点问题:test_taskForm_06
+2023-02-23 09:14:30,213 - root - INFO - *****启动testAddTask用例*****
+2023-02-23 09:14:30,241 - root - INFO - {'productId': 'fa5ca175-6d42-449f-8073-b9361a2e493c', 'versionId': 'b3f7c0eb-f8a0-456c-9836-e75a9ce04879', 'taskName': 'test测试任务we', 'number': '130', 'requireId': '', 'requires': [], 'project': {'id': '9675', 'projectName': '绩效考核系统'}, 'projectId': '9675', 'projectName': '绩效考核系统', 'tags': [], 'inputVisible': 'false', 'inputValue': '', 'taskType': 3, 'handlerId': '3771', 'persons': [], 'moduleId': '', 'moduleName': '', 'modules': [], 'startTime': '2023-02-01', 'endTime': '2023-02-16', 'priority': 3, 'taskIntergral': 0, 'complexCount': '', 'complexWeight': 40, 'urgencyCount': '', 'urgencyWeight': 30, 'innovateCount': '', 'innovateWeight': 30, 'levels': [{'value': 1, 'label': '紧急'}, {'value': 2, 'label': '高'}, {'value': 3, 'label': '中'}, {'value': 4, 'label': '低'}], 'predictTime': '12', 'description': '<p>二七王二驱蚊器</p>', 'fileName': '["1.docx"]', 'filePath': '["/yftx/task/1dea0d26-844a-4a8d-b65c-28f54549c31f.docx"]'}
+2023-02-23 09:14:30,241 - root - INFO - /task/addTask
+2023-02-23 09:14:30,978 - root - INFO - http://192.168.9.221:8086/task/addTask
+2023-02-23 09:14:30,978 - root - INFO - yes
+2023-02-23 09:14:30,978 - root - INFO - <Response [200]>
+2023-02-23 09:14:30,978 - root - INFO - 新增成功!
+2023-02-23 09:14:30,978 - root - INFO - *****启动testAddRequire用例*****
+2023-02-23 09:14:31,071 - root - INFO - <Response [200]>
+2023-02-23 09:14:31,071 - root - INFO - 新增成功!
+2023-02-23 09:14:31,071 - root - INFO - *****启动testDelayRequire用例*****
+2023-02-23 09:14:31,128 - root - INFO - <Response [200]>
+2023-02-23 09:14:31,128 - root - INFO - 延期成功!
+2023-02-23 09:14:31,129 - root - INFO - *********测试结束*********
+2023-02-23 09:14:31,557 - root - INFO - The test report has send to developer by email.
+2023-02-23 09:14:31,557 - root - INFO - 已发送邮件

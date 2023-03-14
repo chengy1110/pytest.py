@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-import unittest
+import pytest
 import warnings
 
 import requests
@@ -15,9 +15,9 @@ logger = MyLog.get_log().logger
 configHttp = ConfigHttp()
 
 
-class Login(unittest.TestCase):
+class Test_Login():
     """登录"""
-    def setUp(self):
+    def setup(self):
         warnings.simplefilter('ignore', ResourceWarning)
         logger.info('*****启动Login用例*****')
         #读取该sheet页的所有用例数据
@@ -73,6 +73,6 @@ class Login(unittest.TestCase):
             logger.info('登录失败!')
 
 
-    def tearDown(self):
+    def teardown(self):
         print('*****销毁Login用例*****')
 

@@ -1,0 +1,974 @@
+2023-03-14 15:58:56,692 - root - INFO - *****启动testAddTaskForm用例*****
+2023-03-14 15:58:57,196 - root - INFO - test_taskForm_01:http://192.168.9.221:8086/login
+2023-03-14 15:58:57,196 - root - INFO - test_taskForm_01:
+
+
+
+
+
+
+
+
+<script>
+    var ctx_js = "";
+    var ctxStatic_js = "/static"
+</script>
+
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/statics/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/statics/style16.css?v=20230314062108">
+	<script src="/statics/jquery-2.1.4.min.js?v=20230314062108"></script>
+	<script type="text/javascript" src="/statics/jquery.cookie.js?v=20230314062108"></script>
+	<script src="/statics/login.js?v=20230314062108"></script>
+	<script src="/static/js/base64.js?v=20230314062108"></script>
+	<script src="/static/js/vue.js?v=20230314062108"></script>
+	<script src="/static/js/element-ui.js?v=20230314062108"></script>
+	<link rel="stylesheet" href="/static/css/element-ui.css?v=20230314062108">
+</head>
+<style>
+	.login-box .center {
+		height: 400px;
+	}
+	.oper a:hover{
+		background-color:#F66F6A;
+		color:#fff;
+		cursor:pointer;
+	}
+	.oper .more{
+		margin-right:15px;
+	}
+	.oper .pro{
+		padding-right:8px;
+		background:url(/static/images/icon_down.png) 95px center no-repeat;
+	}
+	.oper .pro:hover{
+		background-image:url(/static/images/icon_down_hov.png);
+	}
+	.intro-text .oper{
+		margin-top:10px;
+	}
+	.oper a{
+		display:inline-block;
+		width:110px;
+		height:38px;
+		line-height:38px;
+		text-align:center;
+		color:#F66F6A;
+		border:1px solid #F66F6A;
+	}
+	.customer-service:hover{
+		color:#000;
+	}
+	.customer-service:hover .kefuListBox{
+		display: block;
+	}
+	.kefuListBox{
+		display: none;
+		position: absolute;
+		top: 0;
+		left: -157px;
+		width:156px;
+		height:100px;
+	}
+	.kefuListBox ul{
+		width:146px;
+		background: #fff;
+		border-radius: 8px;
+		padding: 13px 0;
+	}
+	.kefuListBox ul li{
+
+		font-weight: bold;
+		line-height: 37px;
+		text-align: center;
+	}
+	.kefuListBox ul li a{
+		display: inline-block;
+		padding-left:25px;
+		background: url(/statics/u166.png) no-repeat left center;
+		background-size:20px 20px;
+	}
+	.kefuListBox ul li:hover{
+		color:#009dda;
+		background: rgba(0, 157, 218, 0.2) ;
+	}
+	.triangle{
+		position: absolute;
+		top: 70px;
+		right: -10px;
+		width:0;
+		height:0;
+		border-width:10px;
+		border-style:solid dashed dashed dashed;
+		border-color:transparent transparent transparent #fff;
+	}
+</style>
+
+<script language="JavaScript">
+    if (window != top)
+        top.location.href = location.href;
+</script>
+<body onload="getCookie()">
+<div class="bg">
+	<img width="100%" height="100%" src="/statics/login-bg.gif" class="bg-img" />
+	<div class="header">
+		<div class="header-con clearfix">
+			<a class="logo fl" href="/login">
+				臻善研发体系管理平台
+			</a>
+		</div>
+	</div>
+	<div class="login-box">
+		<div class="center w960 rl">
+			<div class="intro-text">
+				<ul>
+					<li class="solution">一站式产品/研发体系管理平台</li>
+					<li>协作的升级，管理的延续</li>
+					<li>更快捷，更安全，更方便</li>
+					<li>更有后续的精彩内容</li>
+					<li class="oper">
+						<a href="/propaganda" class="more">了解更多</a>
+						
+					</li>
+				</ul>
+			</div>
+			<div class="login-panel">
+				<form action="/login"  name="form" method="post">
+					<ul class="login-panel-ul">
+
+						<li class="rl">
+							<input class="ipt" type="text" name="username" id="username" value="" placeholder="用户名" data="用户名"  autocomplete="off" />
+							<span class="ipt-remind ab" >用户名</span>
+							<Span id="usernametips" style="color: #f56c6c;font-size: 12px">
+								
+					        </Span>
+						</li>
+
+
+						<li class="rl">
+							<input class="ipt" type="password" name="password" id="password" value="" placeholder="密码" data="密码" autocomplete="off" />
+							<span class="ipt-remind ab">密码</span>
+							<Span id="passwordtips" style="color: #f56c6c;font-size: 12px">
+									
+								</Span>
+						</li>
+						<li class="rl">
+							<img id="captchaImage" src="/getCaptcha" style="cursor: pointer;float: right;width: 100px;
+    height: 38px;" title="看不清？换一张">
+							<div style="overflow: hidden">
+								<input class="ipt" type="text" name="captcha" id="captcha" value="" placeholder="验证码" data="验证码" autocomplete="off" />
+								<span class="ipt-remind ab">验证码</span>
+								<Span id="captchatips" style="color: #f56c6c;font-size: 12px">
+									
+								</Span>
+							</div>
+						</li>
+						<li class="next-login">
+							<label class="rem-psw">
+								<input type="checkbox" class="fl isCheck">
+								<span class="rem-span fl">记住密码</span>
+							</label>
+						</li>
+
+						
+						
+						
+						
+						
+						
+						<li class="login-btn">
+							<button onclick="setCookie(event)">登 录</button>
+						</li>
+
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+	
+	
+		
+			
+			
+				
+					
+						
+							
+						
+						
+					
+				
+
+				
+					
+						
+							
+							
+						
+					
+				
+			
+
+		
+	
+	
+		
+			
+
+			
+		
+	
+
+
+
+	
+		
+			
+				
+				
+			
+			
+				
+				
+			
+			
+				
+				
+			
+		
+	
+
+
+<div class="customer-service">
+	<a target="_blank" href="javascript:">在<br/>线<br/>客<br/>服</a>
+	<div class="kefuListBox">
+		<ul>
+			<li class="item"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2175351084&site=臻善研发体系管理平台一号QQ客服&menu=yes">一号QQ客服</a></li>
+			<li class="item"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2150516013&site=臻善研发体系管理平台二号QQ客服&menu=yes">二号QQ客服</a></li>
+		</ul>
+		<div class="triangle"></div>
+	</div>
+</div>
+
+<script>
+
+	var vm = new Vue();
+
+    $("#drag").drag();
+    $(".ipt").focus(function(){
+        $(this).attr("placeholder","").next("span").show();
+    }).blur(function(){
+        $(this).attr("placeholder",$(this).attr("data")).next("span").hide();
+    })
+    document.onselectstart = function(){
+        return false;
+    }
+	console.log("")
+    if("" != ''){
+        vm.$message.error("")
+	}
+
+	if("" != '' && "" != ''){
+        $('#username').val("");
+        $('#password').val("");
+	}
+
+	
+	
+	    
+        
+		
+		
+	        
+	            
+	            
+			
+		
+	
+
+    $("#username").focus(function(){
+        $("#usernametips").text("");
+	})
+    $("#password").focus(function(){
+        $("#passwordtips").text("");
+    })
+    $("#captcha").focus(function(){
+        $("#captchatips").text("");
+    })
+	$(function(){
+	    $("#captchaImage").bind("click",function(){
+	        $(this).attr('src','/getCaptcha?random=' +Math.random()).fadeIn();
+		});
+	})
+</script>
+<script>
+	const base64 = new Base64();
+    /**
+     * 保存Cookie
+     * */
+    function setCookie(event){
+        var userName = document.getElementsByName("username")[0].value;
+        var passWord = document.getElementsByName("password")[0].value;
+
+        if(userName == ""){
+            $("#usernametips").text("请输入用户名");
+            event.preventDefault();
+			return false;
+		}
+        if(passWord == ""){
+            $("#passwordtips").text("请输入密码");
+            event.preventDefault();
+            return false;
+        }
+        var check=document.getElementsByClassName("isCheck");
+        if(check[0].checked == true){
+
+            if(userName.trim() == null||userName.trim() == ""||passWord.trim() == null||passWord.trim()==""){
+                $.cookie("yftxUserName","",3650);//有效时间7天，也可以设置为永久，把时间去掉就好
+                $.cookie("yftxPassWord","",3650);
+            }else{
+                $.cookie("yftxUserName",userName.trim(),3650);//有效时间7天，也可以设置为永久，把时间去掉就好
+                $.cookie("yftxPassWord",base64.encode(passWord.trim()),3650);
+            }
+        }else{
+            $.cookie("yftxUserName","",3650);//有效时间7天，也可以设置为永久，把时间去掉就好
+            $.cookie("yftxPassWord","",3650);
+        }
+    }
+    /**
+     * 获取Cookie
+     * */
+    function getCookie(){
+        var userName = $.cookie("yftxUserName");//获取cookie中的用户名
+        var passWord = $.cookie("yftxPassWord");//获取cookie中的登陆密码
+        if(passWord){//密码存在的话把“记住用户名和密码”复选框勾选住
+            $(".isCheck").attr("checked","true");
+        }
+        if(userName!=""){//用户名存在的话把用户名填充到用户名文本框
+            $("#username").val(userName);
+        }else{
+            $("#username").val("");
+        }
+        if(passWord!=""){
+            $("#password").val(base64.decode(passWord));
+        }else{
+            $("#password").val("");
+        }
+    }
+    /**
+     * 鼠标移上去异步加载分类下的文章
+     * @param id
+     * @constructor
+     */
+    function MouseOver(id,index,size){
+        // 加载文章
+        $.ajax({
+            url : '/getArticleByCategoryId?id='+id,
+            type : 'POST',
+            async: false,
+            dataType : 'json',
+            success : function(data) {
+
+                $('.clum-ul').html('');
+                var cnt = '';
+                for(var i=0; i<data.length; i++) {
+                    item = data[i];
+                    cnt+='<li>'+
+                        '<a  target="_blank" title="' + item.title +'" href="/viewArticlePage?articleCategoryId=' + item.articleCategoryId +'&id=' + item.id +'" >' + substring(item.title) +'</a>'+
+                        '<p title="' + item.description +'">' + substring(item.description) +'</p>'+
+                        '</li>';
+                }
+                if (size<5){
+
+                    $('.clum-ulno').append(cnt);
+                }else if(size>=5 && parseInt(index/5)<=parseInt(size/5)){
+                    if(Math.ceil(index/5)==Math.ceil(size/5)){
+                        $('.clum-ulno').append(cnt);
+                    }
+                    var i = 0 ;
+                    if (index/5<1){
+                        i=1;
+                    }
+                    var clum = 'clum-ul'+ (Math.ceil(index/5));
+
+
+                    $("."+clum+"").append(cnt);
+                }else{
+
+                    $('.clum-ulno').append(cnt);
+                }
+                // $('.clum-ul').append(cnt);
+
+            },
+            error : function(msg) {
+
+            }
+        });
+    }
+    function substring(str){
+
+        var s = str;//要展示的字符串
+        if(str !=null && str.length>6){
+            s=str.substring(0,15)+"...";
+        }
+        return s;
+    }
+    // 支持手机和pc打开qq会话
+    window.onload = function () {
+        if("" == '' && "" == ''){
+            getCookie();
+		}
+        var as = document.getElementsByTagName('a');
+
+        var kefu101 = "http://wpa.qq.com/msgrd?v=3&uin=2175351084&site=oicqzone.com&menu=yes";
+        var kefu102 = "mqqwpa://im/chat?chat_type=wpa&uin=2175351084&version=1&src_type=web&web_src=oicqzone.com";
+
+        for (var i = 0, len = as.length; i < len; i++) {
+
+            if (as[i].hasAttribute('data-qq')) {
+
+                as[i].onclick = (function (i) {
+
+                    return function (e) {
+
+                        var kefu = e.target ? e.target.getAttribute('data-qq') : e.srcElement.getAttribute('data-qq');
+
+                        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) || /(Android)/i.test(navigator.userAgent)) {
+
+                            window.open(kefu102);
+                        }else {
+                            window.open(kefu101);
+                        }
+                    }
+                })(i);
+            }
+        }
+    };
+</script>
+</body>
+</html>
+2023-03-14 15:58:57,197 - root - INFO - test_taskForm_01:200
+2023-03-14 15:58:57,568 - root - INFO - *****启动testAddTaskForm用例*****
+2023-03-14 15:59:04,746 - root - INFO - test_taskForm_02:http://192.168.9.221:8086/taskForm/addTask
+2023-03-14 15:59:04,746 - root - INFO - test_taskForm_02:ok
+2023-03-14 15:59:04,747 - root - INFO - test_taskForm_02:200
+2023-03-14 15:59:04,755 - root - INFO - *****启动testAddTaskForm用例*****
+2023-03-14 15:59:11,548 - root - INFO - test_taskForm_03:http://192.168.9.221:8086/taskForm/addTask
+2023-03-14 15:59:11,548 - root - INFO - test_taskForm_03:ok
+2023-03-14 15:59:11,548 - root - INFO - test_taskForm_03:200
+2023-03-14 15:59:11,555 - root - INFO - *****启动testAddTaskForm用例*****
+2023-03-14 15:59:18,513 - root - INFO - test_taskForm_04:http://192.168.9.221:8086/taskForm/addTask
+2023-03-14 15:59:18,513 - root - INFO - test_taskForm_04:{"timestamp":"2023-03-14T07:59:18.805+0000","status":500,"error":"Internal Server Error","message":"Transaction rolled back because it has been marked as rollback-only","path":"/taskForm/addTask"}
+2023-03-14 15:59:18,513 - root - INFO - test_taskForm_04:500
+2023-03-14 15:59:18,523 - root - INFO - *****启动testAddChildTaskForm用例*****
+2023-03-14 15:59:18,524 - root - INFO - *****启动DependData用例*****
+2023-03-14 15:59:18,660 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-03-14 15:59:18,712 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-03-14 15:59:19,272 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-03-14 15:59:21,365 - root - INFO - get_depend_response有点问题:test_taskForm_05
+2023-03-14 15:59:21,368 - root - INFO - *****启动testDelTaskForm用例*****
+2023-03-14 15:59:21,626 - root - INFO - *****启动testSaveEditTaskForm用例*****
+2023-03-14 15:59:21,626 - root - INFO - *****启动DependData用例*****
+2023-03-14 15:59:21,765 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-03-14 15:59:21,820 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-03-14 15:59:22,166 - root - INFO - get_request_key有点问题:test_taskForm_000
+2023-03-14 15:59:24,044 - root - INFO - get_depend_response有点问题:test_taskForm_06
+2023-03-14 15:59:24,047 - root - INFO - *****启动testSearchTaskForm用例*****
+2023-03-14 15:59:24,074 - root - INFO - {'programmeEnclosure': [], 'handlerCheckSpareData': [], 'handler': ['3771'], 'handlerInfo': [{'id': '3771', 'name': '成语'}], 'outerType': 1, 'taskName': '测试父工单07@#￥%', 'relateSystemId': '', 'project': {'id': '321576', 'projectId': '321576', 'projectName': '（研究）产品体系管理', 'userId': '3771', 'createDate': '2022-11-02 15:37:56', 'available': 'true', 'projectIdList': [], 'regionCode': '', 'fullRegions': []}, 'projectId': '321576', 'projectName': '（研究）产品体系管理', 'tags': [], 'taskType': 1, 'questionType': '', 'areaArr': [], 'feedbackPerson': '', 'handlerName': '成语', 'handlerId': '3771', 'startTime': '2022-11-04', 'endTime': '2022-11-04', 'priority': 3, 'predictTime': 8, 'taskIntergral': 0, 'description': '', 'fileName': '[]', 'filePath': '[]', 'schemeName': '[]', 'schemePath': '[]', 'isSupport': '0', 'product': '', 'skillType': '', 'skillScope': '', 'firstDeptId': '921', 'secondDeptId': '10641', 'disposeTypeArr': [], 'workTypeArr': [], 'complexcount': '', 'autolog': 'false', 'autoquestion': 'false', 'productZt': '', 'version': '', 'status': 3, 'questionPerson': '', 'questionPersonId': '', 'feedbackTelphone': '', 'serviceInfo': '', 'browser': '', 'actualTime': '', 'questionOption': '', 'questionOptions': '[]', 'productId': '', 'versionId': ''}
+2023-03-14 15:59:24,074 - root - INFO - /taskForm/addTask
+2023-03-14 15:59:24,313 - root - INFO - http://192.168.9.221:8086/login
+2023-03-14 15:59:24,313 - root - INFO - 
+
+
+
+
+
+
+
+
+<script>
+    var ctx_js = "";
+    var ctxStatic_js = "/static"
+</script>
+
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/statics/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/statics/style16.css?v=20230314062108">
+	<script src="/statics/jquery-2.1.4.min.js?v=20230314062108"></script>
+	<script type="text/javascript" src="/statics/jquery.cookie.js?v=20230314062108"></script>
+	<script src="/statics/login.js?v=20230314062108"></script>
+	<script src="/static/js/base64.js?v=20230314062108"></script>
+	<script src="/static/js/vue.js?v=20230314062108"></script>
+	<script src="/static/js/element-ui.js?v=20230314062108"></script>
+	<link rel="stylesheet" href="/static/css/element-ui.css?v=20230314062108">
+</head>
+<style>
+	.login-box .center {
+		height: 400px;
+	}
+	.oper a:hover{
+		background-color:#F66F6A;
+		color:#fff;
+		cursor:pointer;
+	}
+	.oper .more{
+		margin-right:15px;
+	}
+	.oper .pro{
+		padding-right:8px;
+		background:url(/static/images/icon_down.png) 95px center no-repeat;
+	}
+	.oper .pro:hover{
+		background-image:url(/static/images/icon_down_hov.png);
+	}
+	.intro-text .oper{
+		margin-top:10px;
+	}
+	.oper a{
+		display:inline-block;
+		width:110px;
+		height:38px;
+		line-height:38px;
+		text-align:center;
+		color:#F66F6A;
+		border:1px solid #F66F6A;
+	}
+	.customer-service:hover{
+		color:#000;
+	}
+	.customer-service:hover .kefuListBox{
+		display: block;
+	}
+	.kefuListBox{
+		display: none;
+		position: absolute;
+		top: 0;
+		left: -157px;
+		width:156px;
+		height:100px;
+	}
+	.kefuListBox ul{
+		width:146px;
+		background: #fff;
+		border-radius: 8px;
+		padding: 13px 0;
+	}
+	.kefuListBox ul li{
+
+		font-weight: bold;
+		line-height: 37px;
+		text-align: center;
+	}
+	.kefuListBox ul li a{
+		display: inline-block;
+		padding-left:25px;
+		background: url(/statics/u166.png) no-repeat left center;
+		background-size:20px 20px;
+	}
+	.kefuListBox ul li:hover{
+		color:#009dda;
+		background: rgba(0, 157, 218, 0.2) ;
+	}
+	.triangle{
+		position: absolute;
+		top: 70px;
+		right: -10px;
+		width:0;
+		height:0;
+		border-width:10px;
+		border-style:solid dashed dashed dashed;
+		border-color:transparent transparent transparent #fff;
+	}
+</style>
+
+<script language="JavaScript">
+    if (window != top)
+        top.location.href = location.href;
+</script>
+<body onload="getCookie()">
+<div class="bg">
+	<img width="100%" height="100%" src="/statics/login-bg.gif" class="bg-img" />
+	<div class="header">
+		<div class="header-con clearfix">
+			<a class="logo fl" href="/login">
+				臻善研发体系管理平台
+			</a>
+		</div>
+	</div>
+	<div class="login-box">
+		<div class="center w960 rl">
+			<div class="intro-text">
+				<ul>
+					<li class="solution">一站式产品/研发体系管理平台</li>
+					<li>协作的升级，管理的延续</li>
+					<li>更快捷，更安全，更方便</li>
+					<li>更有后续的精彩内容</li>
+					<li class="oper">
+						<a href="/propaganda" class="more">了解更多</a>
+						
+					</li>
+				</ul>
+			</div>
+			<div class="login-panel">
+				<form action="/login"  name="form" method="post">
+					<ul class="login-panel-ul">
+
+						<li class="rl">
+							<input class="ipt" type="text" name="username" id="username" value="" placeholder="用户名" data="用户名"  autocomplete="off" />
+							<span class="ipt-remind ab" >用户名</span>
+							<Span id="usernametips" style="color: #f56c6c;font-size: 12px">
+								
+					        </Span>
+						</li>
+
+
+						<li class="rl">
+							<input class="ipt" type="password" name="password" id="password" value="" placeholder="密码" data="密码" autocomplete="off" />
+							<span class="ipt-remind ab">密码</span>
+							<Span id="passwordtips" style="color: #f56c6c;font-size: 12px">
+									
+								</Span>
+						</li>
+						<li class="rl">
+							<img id="captchaImage" src="/getCaptcha" style="cursor: pointer;float: right;width: 100px;
+    height: 38px;" title="看不清？换一张">
+							<div style="overflow: hidden">
+								<input class="ipt" type="text" name="captcha" id="captcha" value="" placeholder="验证码" data="验证码" autocomplete="off" />
+								<span class="ipt-remind ab">验证码</span>
+								<Span id="captchatips" style="color: #f56c6c;font-size: 12px">
+									
+								</Span>
+							</div>
+						</li>
+						<li class="next-login">
+							<label class="rem-psw">
+								<input type="checkbox" class="fl isCheck">
+								<span class="rem-span fl">记住密码</span>
+							</label>
+						</li>
+
+						
+						
+						
+						
+						
+						
+						<li class="login-btn">
+							<button onclick="setCookie(event)">登 录</button>
+						</li>
+
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+	
+	
+		
+			
+			
+				
+					
+						
+							
+						
+						
+					
+				
+
+				
+					
+						
+							
+							
+						
+					
+				
+			
+
+		
+	
+	
+		
+			
+
+			
+		
+	
+
+
+
+	
+		
+			
+				
+				
+			
+			
+				
+				
+			
+			
+				
+				
+			
+		
+	
+
+
+<div class="customer-service">
+	<a target="_blank" href="javascript:">在<br/>线<br/>客<br/>服</a>
+	<div class="kefuListBox">
+		<ul>
+			<li class="item"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2175351084&site=臻善研发体系管理平台一号QQ客服&menu=yes">一号QQ客服</a></li>
+			<li class="item"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2150516013&site=臻善研发体系管理平台二号QQ客服&menu=yes">二号QQ客服</a></li>
+		</ul>
+		<div class="triangle"></div>
+	</div>
+</div>
+
+<script>
+
+	var vm = new Vue();
+
+    $("#drag").drag();
+    $(".ipt").focus(function(){
+        $(this).attr("placeholder","").next("span").show();
+    }).blur(function(){
+        $(this).attr("placeholder",$(this).attr("data")).next("span").hide();
+    })
+    document.onselectstart = function(){
+        return false;
+    }
+	console.log("")
+    if("" != ''){
+        vm.$message.error("")
+	}
+
+	if("" != '' && "" != ''){
+        $('#username').val("");
+        $('#password').val("");
+	}
+
+	
+	
+	    
+        
+		
+		
+	        
+	            
+	            
+			
+		
+	
+
+    $("#username").focus(function(){
+        $("#usernametips").text("");
+	})
+    $("#password").focus(function(){
+        $("#passwordtips").text("");
+    })
+    $("#captcha").focus(function(){
+        $("#captchatips").text("");
+    })
+	$(function(){
+	    $("#captchaImage").bind("click",function(){
+	        $(this).attr('src','/getCaptcha?random=' +Math.random()).fadeIn();
+		});
+	})
+</script>
+<script>
+	const base64 = new Base64();
+    /**
+     * 保存Cookie
+     * */
+    function setCookie(event){
+        var userName = document.getElementsByName("username")[0].value;
+        var passWord = document.getElementsByName("password")[0].value;
+
+        if(userName == ""){
+            $("#usernametips").text("请输入用户名");
+            event.preventDefault();
+			return false;
+		}
+        if(passWord == ""){
+            $("#passwordtips").text("请输入密码");
+            event.preventDefault();
+            return false;
+        }
+        var check=document.getElementsByClassName("isCheck");
+        if(check[0].checked == true){
+
+            if(userName.trim() == null||userName.trim() == ""||passWord.trim() == null||passWord.trim()==""){
+                $.cookie("yftxUserName","",3650);//有效时间7天，也可以设置为永久，把时间去掉就好
+                $.cookie("yftxPassWord","",3650);
+            }else{
+                $.cookie("yftxUserName",userName.trim(),3650);//有效时间7天，也可以设置为永久，把时间去掉就好
+                $.cookie("yftxPassWord",base64.encode(passWord.trim()),3650);
+            }
+        }else{
+            $.cookie("yftxUserName","",3650);//有效时间7天，也可以设置为永久，把时间去掉就好
+            $.cookie("yftxPassWord","",3650);
+        }
+    }
+    /**
+     * 获取Cookie
+     * */
+    function getCookie(){
+        var userName = $.cookie("yftxUserName");//获取cookie中的用户名
+        var passWord = $.cookie("yftxPassWord");//获取cookie中的登陆密码
+        if(passWord){//密码存在的话把“记住用户名和密码”复选框勾选住
+            $(".isCheck").attr("checked","true");
+        }
+        if(userName!=""){//用户名存在的话把用户名填充到用户名文本框
+            $("#username").val(userName);
+        }else{
+            $("#username").val("");
+        }
+        if(passWord!=""){
+            $("#password").val(base64.decode(passWord));
+        }else{
+            $("#password").val("");
+        }
+    }
+    /**
+     * 鼠标移上去异步加载分类下的文章
+     * @param id
+     * @constructor
+     */
+    function MouseOver(id,index,size){
+        // 加载文章
+        $.ajax({
+            url : '/getArticleByCategoryId?id='+id,
+            type : 'POST',
+            async: false,
+            dataType : 'json',
+            success : function(data) {
+
+                $('.clum-ul').html('');
+                var cnt = '';
+                for(var i=0; i<data.length; i++) {
+                    item = data[i];
+                    cnt+='<li>'+
+                        '<a  target="_blank" title="' + item.title +'" href="/viewArticlePage?articleCategoryId=' + item.articleCategoryId +'&id=' + item.id +'" >' + substring(item.title) +'</a>'+
+                        '<p title="' + item.description +'">' + substring(item.description) +'</p>'+
+                        '</li>';
+                }
+                if (size<5){
+
+                    $('.clum-ulno').append(cnt);
+                }else if(size>=5 && parseInt(index/5)<=parseInt(size/5)){
+                    if(Math.ceil(index/5)==Math.ceil(size/5)){
+                        $('.clum-ulno').append(cnt);
+                    }
+                    var i = 0 ;
+                    if (index/5<1){
+                        i=1;
+                    }
+                    var clum = 'clum-ul'+ (Math.ceil(index/5));
+
+
+                    $("."+clum+"").append(cnt);
+                }else{
+
+                    $('.clum-ulno').append(cnt);
+                }
+                // $('.clum-ul').append(cnt);
+
+            },
+            error : function(msg) {
+
+            }
+        });
+    }
+    function substring(str){
+
+        var s = str;//要展示的字符串
+        if(str !=null && str.length>6){
+            s=str.substring(0,15)+"...";
+        }
+        return s;
+    }
+    // 支持手机和pc打开qq会话
+    window.onload = function () {
+        if("" == '' && "" == ''){
+            getCookie();
+		}
+        var as = document.getElementsByTagName('a');
+
+        var kefu101 = "http://wpa.qq.com/msgrd?v=3&uin=2175351084&site=oicqzone.com&menu=yes";
+        var kefu102 = "mqqwpa://im/chat?chat_type=wpa&uin=2175351084&version=1&src_type=web&web_src=oicqzone.com";
+
+        for (var i = 0, len = as.length; i < len; i++) {
+
+            if (as[i].hasAttribute('data-qq')) {
+
+                as[i].onclick = (function (i) {
+
+                    return function (e) {
+
+                        var kefu = e.target ? e.target.getAttribute('data-qq') : e.srcElement.getAttribute('data-qq');
+
+                        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) || /(Android)/i.test(navigator.userAgent)) {
+
+                            window.open(kefu102);
+                        }else {
+                            window.open(kefu101);
+                        }
+                    }
+                })(i);
+            }
+        }
+    };
+</script>
+</body>
+</html>
+2023-03-14 15:59:24,313 - root - INFO - <Response [200]>
+2023-03-14 15:59:24,397 - root - INFO - *****启动testSendBackTask用例*****
+2023-03-14 15:59:24,397 - root - INFO - *****启动DependData用例*****
+2023-03-14 15:59:24,551 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-03-14 15:59:24,605 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-03-14 15:59:24,919 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-03-14 15:59:26,873 - root - INFO - get_depend_response有点问题:test_taskForm_12
+2023-03-14 15:59:26,877 - root - INFO - *****启动testSubmitAssignTaskForm用例*****
+2023-03-14 15:59:26,877 - root - INFO - *****启动DependData用例*****
+2023-03-14 15:59:27,105 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-03-14 15:59:27,173 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-03-14 15:59:27,822 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-03-14 15:59:29,845 - root - INFO - get_depend_response有点问题:test_taskForm_08
+2023-03-14 15:59:29,848 - root - INFO - *****启动testSubmitEvaluateTaskForm用例*****
+2023-03-14 15:59:29,849 - root - INFO - *****启动DependData用例*****
+2023-03-14 15:59:29,987 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-03-14 15:59:30,031 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-03-14 15:59:30,617 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-03-14 15:59:31,062 - root - INFO - *****启动testSubmitLogTaskForm用例*****
+2023-03-14 15:59:31,062 - root - INFO - *****启动DependData用例*****
+2023-03-14 15:59:31,157 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-03-14 15:59:31,193 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-03-14 15:59:31,733 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-03-14 15:59:37,010 - root - INFO - get_depend_response有点问题:test_taskForm_07
+2023-03-14 15:59:37,013 - root - INFO - *****启动testSubmitProcessFeedback用例*****
+2023-03-14 15:59:37,014 - root - INFO - *****启动DependData用例*****
+2023-03-14 15:59:37,114 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-03-14 15:59:37,151 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-03-14 15:59:37,776 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-03-14 15:59:39,667 - root - INFO - get_depend_response有点问题:test_taskForm_10
+2023-03-14 15:59:39,670 - root - INFO - *****启动testSubmitSendUser用例*****
+2023-03-14 15:59:39,671 - root - INFO - *****启动DependData用例*****
+2023-03-14 15:59:39,819 - root - INFO - get_request_key有点问题:test_taskForm_01
+2023-03-14 15:59:39,861 - root - INFO - get_depend_response有点问题:test_taskForm_01
+2023-03-14 15:59:40,351 - root - INFO - get_request_key有点问题:test_taskForm_00
+2023-03-14 15:59:42,003 - root - INFO - get_depend_response有点问题:test_taskForm_11
