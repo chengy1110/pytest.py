@@ -48,7 +48,7 @@ class Test_AddTaskForm():
         print("test_taskForm_01:" + str(res.status_code))
 
         # 判断字段是否存在与json中
-        self.assertEqual(res.status_code,200)
+        assert res.status_code==200
         logger.info('新增父工单成功!')
 
 
@@ -77,7 +77,7 @@ class Test_AddTaskForm():
         logger.info("test_taskForm_02:" + res.text)
         logger.info("test_taskForm_02:" + str(res.status_code))
 
-        self.assertNotEqual(res.status_code,200)
+        assert res.status_code!=200
         logger.info('不传必填项taskName:测试成功')
 
     # 必填项taskName有特殊字符
@@ -104,7 +104,7 @@ class Test_AddTaskForm():
         logger.info("test_taskForm_03:" + res.text)
         logger.info("test_taskForm_03:" + str(res.status_code))
 
-        self.assertNotEqual(res.status_code, 200)
+        assert res.status_code!=200
         logger.info('必填项taskName有特殊字符:测试成功')
 
 
@@ -132,7 +132,7 @@ class Test_AddTaskForm():
         logger.info("test_taskForm_04:" + res.text)
         logger.info("test_taskForm_04:" + str(res.status_code))
 
-        self.assertNotEqual(res.status_code,200)
+        assert res.status_code!=200
         logger.info('必填项taskName长度超出255字符限制:测试成功')
 
 
