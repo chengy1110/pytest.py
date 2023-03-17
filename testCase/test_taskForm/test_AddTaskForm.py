@@ -141,6 +141,5 @@ class Test_AddTaskForm():
     def teardown(self):
         print('*****销毁Add用例*****')
 
-if __name__ == '__main__':
-    pytest.main()
+
 
